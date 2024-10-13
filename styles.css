@@ -1,0 +1,180 @@
+/* */
+
+/*Define que a pagina inteira não possui margens tanto de altura como de largura*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Define todas as cores e letras utilizadas na página definidas em variáveis para fácil entendimento, utilização e manutenção*/
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #8bbbf5;
+}
+
+/*Define e seta as características utilizadas no corpo do html*/
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/*Define e seta as características nos elementos especificados dentro do html*/
+.principal {
+    background-image: url("img/Background.png"); /*Define a imagem de fundo*/
+    background-repeat: no-repeat; /*Obriga que a imagem de fundo não se repita*/
+    background-size: contain; /*Define o tamanho da imagem de fundo não se repita*/
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height: 100vh; /*Define a altura do container*/
+    display: grid; /*Define o alinhamento dos componentes*/
+    grid-template-columns: 50% 50%;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);/*Cor de fundo do botão*/
+    border-radius: 5px; /*Cria a curvinha arredondada em volta do botão*/
+    padding: 1em; /*Deixa o botão mais alto*/
+    color: var(--branco-principal); /*Cor da letra interna no botão*/
+    display: block; /*Define o alinhamento do botão*/
+    text-decoration: none; /*Define que o botão não possui decoração*/
+    margin-bottom: 1em; /*Define a margem para baixo do botão(distanciamento)*/
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0; /*Define margem da imagem no html em cima, direita, baixo e esquerda respectivamente*/
+}
+
+.container__caixa {
+    margin: 0 6em; /*Define margem da caixa da div no html em cima/baixo(juntos), esquerda/direita(juntos), respectivamente*/
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.container__descricao {
+    align-items: left;
+    text-align: left;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em; /*Define a margem para cima do botão(distanciamento)*/
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.dispositivos__lista {
+    display: flex; /*Alinha os elementos da lista li tudo um do lado do outro*/
+    justify-content: center;/*Centraliza a lista*/
+    list-style-type: none; /*Retira a bolinha da lista(°)*/
+    margin: 5em 0;
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5em;
+    text-align: center;
+    margin: 0 9.9em 0 9.9em;
+}
+
+.rodape__logo {
+    width: 6.4em;
+    text-align: center;
+}
+
+.rodape__lista {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.rodape__lista__link {
+    color: var(--branco-principal);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.rodape__direitos {
+    display: flex;
+    flex-direction: column;
+    margin: 0 7.7em 5em 7.7em;
+    gap: 1em;
+}
+
+.rodape__direitos__texto {
+    color: var(--cinza-secundario);
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+/*texto fica azul ao deixar o mouse em cima*/
+.rodape__lista__opcoes a:hover {
+    color: var(--botao-azul);
+}
+
+.rodape__lista__opcoes a:active {
+    color: purple;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
